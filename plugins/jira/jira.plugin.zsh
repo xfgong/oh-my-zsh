@@ -8,7 +8,7 @@ open_jira_issue () {
     echo "There is no .jira-url file in the HOME directory..."
     return 0;
   else
-    jira_url=$(cat .jira-url);
+    jira_url=$(cat ~/.jira-url);
     if [ -z "$1" ]; then
       echo "Opening new issue";
       `open $jira_url/secure/CreateIssue!default.jspa`;
